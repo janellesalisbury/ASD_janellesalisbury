@@ -12,9 +12,9 @@ function XML(){
 			$(data).find("item").each(function(){
 				var xmlname= $(this).find("name").text();
 				var xmlbrand= $(this).find("brand").text();
-				var xmlcolor= (this).find("color").text();
-				var xmldate= (this).find("date").text();
-				var xmlsize= (this).find("size").text();
+				var xmlcolor= $(this).find("color").text();
+				var xmldate= $(this).find("date").text();
+				var xmlsize= $(this).find("size").text();
 				var listelement = '<li>' +
            			 '<h3> Name: ' + xmlname + '</h3>' +
            			 '<p> Brand: ' + xmlbrand + '&nbsp;&nbsp; &nbsp;&nbsp; Size: ' +xmlsize + '</p>' +
@@ -47,10 +47,11 @@ function JSON(){
 				$("#item-name").val(jsonname);
 				$("#brand").val(jsonbrand);
 				$("item-color").val(jsoncolor);	
-				).appendTo("#json");	
-			};// end of success
-		}); // end of ajax */
-	};// end of function.json
+				).appendTo("#json");
+			}); end of .each	
+		};// end of success
+	}); // end of ajax */
+};// end of function.json
 
 
 $("JSON").bind("click", JSON);
