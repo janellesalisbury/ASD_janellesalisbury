@@ -91,14 +91,14 @@ function XML(){
 			alert("Data successfully loaded");
 			console.log(status, data);
 			$(data).find("info").each(function(){
-				var xmlitemname= $(this).find("name").text();
+				var xmlname= $(this).find("name").text();
 				var xmlbrand= $(this).find("brand").text();
-				var xmlitemcolor= (this).find("color").text();
+				var xmlcolor= (this).find("color").text();
 				var xmldate= (this).find("date").text();
 				var xmlsize= (this).find("size").text();
-				$("#item-name").val(xmlitem-name);
+				$("#item-name").val(xmlname);
 				$("#brand").val(xmlbrand);
-				$("#item-color").val(xmlitem-color);
+				$("#item-color").val(xmlcolor);
 				).appendTo("#xml");
 			};
 		
@@ -121,9 +121,9 @@ function JSON(){
 				var jsoncolor= (data.info.color;)
 				var jsondate= (data.info.date);
 				var jsonsize= (data.info.size);
-				$("#item-name").val(jsonitem-name);
+				$("#item-name").val(jsonname);
 				$("#brand").val(jsonbrand);
-				$("item-color").val(jsonitem-color);	
+				$("item-color").val(jsoncolor);	
 				).appendTo("#json");	
 			};
 		}
