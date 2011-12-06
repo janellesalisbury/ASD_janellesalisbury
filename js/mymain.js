@@ -1,18 +1,75 @@
 
 
 $(document).ready(function() {
-    if (typeof(localStorage) == 'undefined') {
-        alert('Your browser does not support HTML5 LocalStorage');
-    } else getItems();
-        $('#additemform').submit(function() {
-        var newDate = new Date();
-        var itemId = newDate.getTime();
+function XML(){
+	$.ajax({
+		url: "XHR/data.xml",
+		type: "GET",
+		dataType: "xml",
+		success: function(data, status){
+			alert("Data successfully loaded");
+			console.log(status, data);
+			$(data).find("item").each(function(){
+				var xmlname= $(this).find("name").text();
+				var xmlbrand= $(this).find("brand").text();
+				var xmlcolor= (this).find("color").text();
+				var xmldate= (this).find("date").text();
+				var xmlsize= (this).find("size").text();
+				var listelement = '<li>' +
+           			 '<h3> Name: ' + xmlname + '</h3>' +
+           			 '<p> Brand: ' + xmlbrand + '&nbsp;&nbsp; &nbsp;&nbsp; Size: ' +xmlsize + '</p>' +
+            		 '<p> Color: ' + xmlcolor + ' &nbsp;&nbsp; &nbsp;&nbsp; Date Bought: ' + xmldate + '</p>' +
+           			 '<hr/></li>';
 
-        var cat = $("#cat").val();
-        var name = $("#item-name").val();
-        var brand = $("#brand").val();
-        var size = $("#size").val();
-        var color = $("#item-color").val();
+
+				$(listelement).appendTo("#xml");
+			}); //end of .each
+		 } //end of success	
+		
+		}); //end of .ajax
+	
+	};// end of function.xml
+
+
+function JSON(){
+/*	$.ajax({
+		url: "data.json",
+		type:"GET",
+		dataType: "json",
+		success: function(data, status){
+			alert ("Data successfully loaded");
+			console.log(staus, data);
+				var jsonname= (data.info.name);
+				var jsonbrand= (data.info.brand);
+				var jsoncolor= (data.info.color;)
+				var jsondate= (data.info.date);
+				var jsonsize= (data.info.size);
+				$("#item-name").val(jsonname);
+				$("#brand").val(jsonbrand);
+				$("item-color").val(jsoncolor);	
+				).appendTo("#json");	
+			};// end of success
+		}); // end of ajax */
+	};// end of function.json
+
+
+$("JSON").bind("click", JSON);
+$("#getXML").click(XML);
+
+});
+
+  //  if (typeof(localStorage) == 'undefined') {
+  //      alert('Your browser does not support HTML5 LocalStorage');
+ //   } else getItems();
+    //    $('#additemform').submit(function() {
+    //    var newDate = new Date();
+    //    var itemId = newDate.getTime();
+
+    //    var cat = $("#cat").val();
+     //   var name = $("#item-name").val();
+     //   var brand = $("#brand").val();
+     //   var size = $("#size").val();
+      /*  var color = $("#item-color").val();
         var date = $("#mydate").val();
         var drycln = $("#dryclean").val();
         var notes = $("#notes").val();
@@ -23,10 +80,10 @@ $(document).ready(function() {
         localStorage.setItem(itemId, vals);
         alert('Storage Successful');
 
-    });
- });
+    });*/
 
-function getItems() {
+
+/*function getItems() {
     var i = 0;
     var listelement = "";
     var dblen = localStorage.length-1;
@@ -80,67 +137,18 @@ function deleteData(id) {
 		alert("Item not removed!");
 
     }
-}
+}*/
 
-function XML(){
-	$.ajax({
-		url: "data.xml",
-		type: "GET",
-		dataType: "xml",
-		success: function(data, status){
-			alert("Data successfully loaded");
-			console.log(status, data);
-			$(data).find("info").each(function(){
-				var xmlname= $(this).find("name").text();
-				var xmlbrand= $(this).find("brand").text();
-				var xmlcolor= (this).find("color").text();
-				var xmldate= (this).find("date").text();
-				var xmlsize= (this).find("size").text();
-				$("#item-name").val(xmlname);
-				$("#brand").val(xmlbrand);
-				$("#item-color").val(xmlcolor);
-				).appendTo("#xml");
-			};
-		
-		}
-	
-	};
-
-}
-
-function JSON(){
-	$.ajax({
-		url: "data.json",
-		type:"GET",
-		dataType: "json"
-		success: function(data, status){
-			alert ("Data successfully loaded");
-			console.log(staus, data);
-				var jsonname= (data.info.name);
-				var jsonbrand= (data.info.brand);
-				var jsoncolor= (data.info.color;)
-				var jsondate= (data.info.date);
-				var jsonsize= (data.info.size);
-				$("#item-name").val(jsonname);
-				$("#brand").val(jsonbrand);
-				$("item-color").val(jsoncolor);	
-				).appendTo("#json");	
-			};
-		}
-	};
-}
 
 // CSV here- no clue how to call it
 
-$("#submit").bind("click", validate);
+/*$("#submit").bind("click", validate);
 $("#view").bind("click", getData);
 $("#clear").bind("click", clearLocal);
-$("JSON").bind("click", JSON);
-$("XML").bind("click", XML);
 
 		}
 	}:
-}
+}*/
 
 
 
@@ -153,5 +161,5 @@ $("XML").bind("click", XML);
 
 
 
-}
+
 
