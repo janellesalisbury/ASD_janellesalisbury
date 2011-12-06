@@ -8,7 +8,7 @@ function XML(){
 		dataType: "xml",
 		success: function(data, status){
 			alert("Data successfully loaded");
-			console.log(status, data);
+			console.log(data, status);
 			$(data).find("item").each(function(){
 				var xmlname= $(this).find("name").text();
 				var xmlbrand= $(this).find("brand").text();
@@ -24,37 +24,41 @@ function XML(){
 
 				$(listelement).appendTo("#xml");
 			}); //end of .each
-		 } //end of success	
+		} //end of success	
 		
-		}); //end of .ajax
+	}); //end of .ajax
 	
-	};// end of function.xml
+};// end of function.xml
 
 
 function JSON(){
-/*	$.ajax({
-		url: "data.json",
+	$.ajax({
+		url: "XHR/data.json",
 		type:"GET",
 		dataType: "json",
 		success: function(data, status){
-			alert ("Data successfully loaded");
-			console.log(staus, data);
-				var jsonname= (data.info.name);
-				var jsonbrand= (data.info.brand);
-				var jsoncolor= (data.info.color;)
-				var jsondate= (data.info.date);
-				var jsonsize= (data.info.size);
-				$("#item-name").val(jsonname);
-				$("#brand").val(jsonbrand);
-				$("item-color").val(jsoncolor);	
-				).appendTo("#json");
-			}); end of .each	
-		};// end of success
-	}); // end of ajax */
+			alert("Data successfully loaded");
+			console.log(data, status);
+			$(data).find("items").each(function(){
+				var jsonname= $(this).find("name").text();
+				var jsonbrand= $(this).find("brand").text();
+				var jsonsize= $(this).find("size").text();
+				var jsoncolor= $(this).find("color").text();
+				var jsondate= $(this).find("date").text();
+				var listelement= '<li>' +
+           			 '<h3> Name: ' + jsonname + '</h3>' +
+           			 '<p> Brand: ' + jsonbrand + '&nbsp;&nbsp; &nbsp;&nbsp; Size: ' +jsonsize + '</p>' +
+            		 '<p> Color: ' + jsoncolor + ' &nbsp;&nbsp; &nbsp;&nbsp; Date Bought: ' + jsondate + '</p>' +
+            		 '<hr/></li>';
+            		 
+           		$(listelement).appendTo("#json");
+           	}); // end of .each
+		} // end of success
+	}); // end of ajax 
 };// end of function.json
 
 
-$("JSON").bind("click", JSON);
+$("#getJSON").click(JSON);
 $("#getXML").click(XML);
 
 });
