@@ -39,12 +39,13 @@ function JSON(){
 		success: function(data, status){
 			alert("Data successfully loaded");
 			console.log(data, status);
-			$(data).find("items").each(function(){
-				var jsonname= $(this).find("name").text();
-				var jsonbrand= $(this).find("brand").text();
-				var jsonsize= $(this).find("size").text();
-				var jsoncolor= $(this).find("color").text();
-				var jsondate= $(this).find("date").text();
+			$.each(data.items, function(index,value){
+				console.log(value);
+				var jsonname= (value.name);
+				var jsonbrand= (value.brand);
+				var jsonsize= (value.size);
+				var jsoncolor= (value.color);
+				var jsondate= (value.date);
 				var listelement= '<li>' +
            			 '<h3> Name: ' + jsonname + '</h3>' +
            			 '<p> Brand: ' + jsonbrand + '&nbsp;&nbsp; &nbsp;&nbsp; Size: ' +jsonsize + '</p>' +
@@ -57,9 +58,28 @@ function JSON(){
 	}); // end of ajax 
 };// end of function.json
 
+/*function CSV(){
+	$.ajax({
+		url: "XHR/data.csv",
+		type: "GET",
+		dataType: "csv",
+		success: function(data, status){
+			alert("Data successfully loaded");
+			console.log(data, status);
+			var lines= data.split("/n");
+				for (var lineNum = 0; lineNum < lines.length; lineNum++){
+					var row= lines[lineNum];
+					var columns= row.split(",");
+					console.log(cloumns);
+				}
+		}
+
+});*/
+
 
 $("#getJSON").click(JSON);
 $("#getXML").click(XML);
+
 
 });
 
@@ -145,7 +165,6 @@ function deleteData(id) {
 }*/
 
 
-// CSV here- no clue how to call it
 
 /*$("#submit").bind("click", validate);
 $("#view").bind("click", getData);
@@ -154,7 +173,6 @@ $("#clear").bind("click", clearLocal);
 		}
 	}:
 }*/
-
 
 
 
