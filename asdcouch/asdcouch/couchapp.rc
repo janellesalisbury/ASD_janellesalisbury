@@ -3,9 +3,8 @@
     "local": {
       "db": "http://127.0.0.1:5984/asdproject"
     },
-     "env": {
     "cloudant": {
-      "db": "http://itiveditervendarzanytond:QTVeySmH2B8FGcBNFlYvT7N4@janellesalisbury.cloudant.com"
+      "db": "https://itiveditervendarzanytond:QTVeySmH2B8FGcBNFlYvT7N4@janellesalisbury.cloudant.com/asdproject"
     }
    }
 } 
