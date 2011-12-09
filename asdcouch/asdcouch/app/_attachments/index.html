@@ -29,16 +29,232 @@
                 <h1>Clothing Categories</h1>
             </div>
             <div data-role="content">
-                 
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search Clothing...">
+                    <p align=center><img src="images/JC-logo3.png" width=90%></p>
+                </ul>
                 <ul id= "Itemslist" data-role="listview">
                 </ul>
                 <ul id= "Bottomslist" data-role= "listview">
                 </ul>
                 <ul id= "Jewelrylist" data-role= "listview">
                 </ul>
-                <ul id= "Topslist" data-role= "listview">
+                <ul id 
+                <p align=center>Add your clothing items and keep a detailed log.</p>
+                <p><a href="#additem" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Clothing Item</a></p>
+                <p><a href="#inv-lists" data-role="button" data-icon="arrow-r" data-iconpos="right">View Inventory</a> </p>
+                <p><a href="#ajaxpage" data-role="button" data-icon="arrow-r" data-iconpos="right">Ajax Project</a> </p>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+              	 <h3>Made by Janelle Salisbury</h3>  
+            </div>
+        </div>
+        <!-- This page is for listing the Ajax data -->
+        <!-- Using Ajax to pull in data from json, xml, and ????  -->
+
+        <div data-role="page" id="ajaxpage" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                <h1>Ajax Project 1</h1>
+            </div>
+            <div data-role="content"
+               <ul id="ajaxtest" data-role="listview" data-inset="true" data-theme="f">
+               		<p align=center><img src="images/JC-logo3.png" width=60%></p>
+                </ul>
+                <p><a href= "#" id= "getJSON" data-role="button" data-icon="arrow-r" data-iconpos="right">JSON</a></p>
+                <p><a href= "#" id= "getXML" data-role="button" data-icon="arrow-r" data-iconpos="right">XML</a></p>
+                <p><a href= "#" id= "getCSV" data-role="button" data-icon="arrow-r" data-iconpos="right">CSV</a></p>
+               <ul id="xml" data-role="listview" data-inset="true" data-theme="f">
+               </ul>
+               <ul id="json" data-role="listview" data-inset="true" data-theme="f">
+               </ul>
+               <ul id= "csv" data-role= "listview" data-insert="true" data-theme="f">
+               </ul>
+              
+               
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+        <!-- End of Ajax Project Page -->
+        
+        <div data-role="page" id="inv-lists" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                <h1>Shoes</h1>
+            </div>
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <p><a href="#tops"  data-role="button" data-icon="arrow-r" data-iconpos="right">Tops</a></p>
+                <p><a href="#bottoms"  data-role="button" data-icon="arrow-r" data-iconpos="right">Bottoms</a></p>
+                <p><a href="#jewelry" data-role="button" data-icon="arrow-r" data-iconpos="right"> Jewelry</a></p>
+                <p><a href="#handbags"  data-role="button" data-icon="arrow-r" data-iconpos="right">Handbags</a></p>
+                <p><a href="#shoes"  data-role="button" data-icon="arrow-r" data-iconpos="right">Shoes</a> </p>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="shoes" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                <h1>Shoes</h1>
+            </div>
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <ul id="shoes-list" data-role="listview" data-inset="true" data-theme="a">
+                    <li>
+
+                    </li>
                 </ul>
             </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+   
+        <div data-role="page" id="jewelry" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                 <h1>Jewelry</h1>
+            </div>
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <ul id="jewelry-list" data-role="listview" data-inset="true" data-theme="a">
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+   
+        <div data-role="page" id="tops" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                 <h1>Tops</h1>
+            </div>
+
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <ul id="tops-list" class="tlist" data-role="listview" data-inset="true" data-theme="a">
+                    <li>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+        <div data-role="page" id="bottoms" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                 <h1>Bottoms</h1>
+            </div>
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <ul id="bottoms-list" data-role="listview" data-inset="true" data-theme="a">
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+        <div data-role="page" id="handbags" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+                 <h1>Handbags</h1>
+            </div>
+            <div data-role="content">
+                <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <ul id="handbags-list" data-role="listview" data-inset="true" data-theme="a">
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
+
+        <div data-role="page" id="additem" data-add-back-btn="true" data-theme="f">
+            <div data-role="header" data-position="fixed">
+
+                <h1>Add Clothing Item</h1>
+            </div>
+            <div data-role="content">
+            <p align=center><img src="images/JC-logo3.png" width=60%></p>
+                <form action="" method="post" id="additemform">
+                    <div data-role="fieldcontain">
+                        <label for="cat">Catagory:</label>
+                        <select name="cat" id="cat" class="required">
+                        <option data-placeholder="true">Pick A Catagory</option>
+                        <option value="tops">Tops</option>
+                        <option value="bottoms">Bottoms</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="handbags">Handbags</option>
+                        <option value="shoes">Shoes</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="item-name">Item Name:</label>
+                            <input type="text" name="item-name" id="item-name" class="required" placeholder="Name of Item" onfocus="if(this.attr(placeholder)=='Name of Item') this.attr(placeholder)='';">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="brand">Brand:</label>
+                            <input type="text" name="brand" id="brand" placeholder="What Brand" onfocus="if(this.attr(placeholder)=='What Brand') this.attr(placeholder)='';">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="size">Size:</label>
+                        <select name="size" id="size">
+                        <option data-placeholder="true">Select Size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="No Size">No Size</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="item-color">Color:</label>
+                        <select name="item-color" id="item-color" class="required">
+                        <option data-placeholder="true">Please Select Color:</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="mydate">Date Purchased:</label>
+                        <input type="date" name="mydate" id="mydate" data-role="datebox" data-options='{"mode":"flipbox"}'>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="dryclean">Dry Clean Only?:</label>
+                            <select name="slider" id="dryclean" data-role="slider">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            </select>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" placeholder="add note" onfocus="if(this.attr(placeholder)=='add note') this.attr(placeholder)='';"></textarea>
+                    </div>
+                    <input type="submit" value="Add To Closet" data-icon="check" data-iconpos="right">
+                </form>
+        	</div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <h3>Made by Janelle Salisbury</h3>
+            </div>
+        </div>
 	<!-- Javascript under here -->
 	
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
@@ -47,7 +263,8 @@
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script src="js/JSON.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/mymain.js"></script>
-	<script type="text/javascript" src= "main.js"></script>
+	<script type= "text/javascript" src= "main.js"></script> 
+
 
 </body>
 </html>
