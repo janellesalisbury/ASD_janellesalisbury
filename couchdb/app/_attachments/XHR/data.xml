@@ -1,0 +1,42 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+
+
+
+<items>
+	<item>
+		<name>Molly Jeans</name>
+		<brand>Maurices</brand>
+		<color>Dark Denim</color>
+		<date>12-10-10</date>
+	</item>
+	<item>
+		<name>Jasmine Sweater</name>
+		<brand>GAP</brand>
+		<color>Black</color>
+		<date>03-03-03</date>
+	</item>
+	<item>
+		<name>Antonio Shoe</name>
+		<brand>DKNY</brand>
+		<color>Multi</color>
+		<date>01-01-11</date>
+	</item>
+	<item>
+		<name>Macy Tee</name>
+		<brand>Claire's</brand>
+		<color>Silver</color>
+		<date>05-10-11</date>
+	</item>
+	<item>
+		<name>Hoop Earrings</name>
+		<brand>Walmart</brand>
+		<color>Green</color>
+		<date>04-05-09</date>
+	</item>
+	<item>
+		<name>Gemma</name>
+		<brand>Dooney &amp; Bourke</brand>
+		<color>Brown</color>
+		<date>12-30-10</date>
+	</item>
+</items>

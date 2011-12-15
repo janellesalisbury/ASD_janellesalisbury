@@ -1,0 +1,13 @@
+{
+  "env": {
+    "default": {
+			"db": "http://127.0.0.1:5984/asdproject"
+		},
+    "local": {
+      "db": "http://127.0.0.1:5984/asdproject"
+    },
+    "cloudant": {
+    	"db": "https://shesseesseatefeetediants:CiFnQFXny0WEk0yIJFsa3j5M@janellesalisbury.cloudant.com/asdproject"
+    	}
+  }
+}
